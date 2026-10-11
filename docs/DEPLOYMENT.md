@@ -72,6 +72,6 @@ For an alternative database provider, use its documented TLS-enabled connection 
 
 ## Deployment status
 
-GitHub publication is complete: [Aifullstackcraft/taskbid](https://github.com/Aifullstackcraft/taskbid), a private repository on branch `main`. The initial implementation/deployment-preparation commit is `f88de09`. Reviewers require access to the private repository.
+GitHub publication is complete: [Aifullstackcraft/taskbid](https://github.com/Aifullstackcraft/taskbid), a public repository on branch `main`. Public visibility was explicitly requested by the owner and verified with an unauthenticated API request returning 200. The initial implementation/deployment-preparation commit is `f88de09`.
 
-Render's sign-in page was opened; an authenticated Render account is not yet available. No hosted resources or live service URL have been created. Render authentication, resource creation, and live verification must be completed before claiming this application is deployed.
+Render sign-in is complete and Render can read the public repository. Both the Blueprint flow and manual PostgreSQL creation require a card on this account. The manual page states this is identity verification with a temporary $1 authorization. The owner must complete financial verification themselves; no payment information was entered by the agent. No hosted resources or live service URL have been created. Verification, resource creation, and live checks must be completed before claiming this application is deployed.
