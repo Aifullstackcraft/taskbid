@@ -72,4 +72,6 @@ For an alternative database provider, use its documented TLS-enabled connection 
 
 ## Deployment status
 
-No GitHub repository URL or live service URL is recorded here yet. Account authentication, resource creation, and live verification must be completed before claiming this application is deployed.
+GitHub publication is complete: [Aifullstackcraft/taskbid](https://github.com/Aifullstackcraft/taskbid), a private repository on branch `main`. The initial implementation/deployment-preparation commit is `f88de09`. Reviewers require access to the private repository.
+
+Render's sign-in page was opened; an authenticated Render account is not yet available. No hosted resources or live service URL have been created. Render authentication, resource creation, and live verification must be completed before claiming this application is deployed.

@@ -2,7 +2,9 @@
 
 A collaborative task marketplace built with React, Express, TypeScript, and PostgreSQL. Team members bid in hours; assignment selects the lowest bidder who still has capacity, atomically.
 
-**Deployment:** the free Render configuration is prepared in `render.yaml`. GitHub publication, account setup, and live verification are pending. A verified live URL and a 10-minute Loom walkthrough must be added before submission. See [the deployment guide](docs/DEPLOYMENT.md).
+**Repository:** [Aifullstackcraft/taskbid](https://github.com/Aifullstackcraft/taskbid) (private; reviewers require access).
+
+**Deployment:** the free Render configuration is prepared in `render.yaml`, and the source is pushed to GitHub. Render account access, resource creation, and live verification are pending. A verified live URL and a 10-minute Loom walkthrough must be added before submission. See [the deployment guide](docs/DEPLOYMENT.md).
 
 ## Run locally
 
