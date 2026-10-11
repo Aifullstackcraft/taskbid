@@ -1,6 +1,6 @@
 # Free deployment: GitHub and Render
 
-Prepared on 11 October 2026. This file describes the deployment configuration; it is not evidence of a completed live deployment. Record the verified URL and database expiry after creation.
+Deployed and verified on 11 October 2026. Live URL: [https://taskbid-pisc.onrender.com](https://taskbid-pisc.onrender.com). Database expiry shown by Render: **10 November 2026**.
 
 ## Keep the combined structure
 
@@ -74,4 +74,17 @@ For an alternative database provider, use its documented TLS-enabled connection 
 
 GitHub publication is complete: [Aifullstackcraft/taskbid](https://github.com/Aifullstackcraft/taskbid), a public repository on branch `main`. Public visibility was explicitly requested by the owner and verified with an unauthenticated API request returning 200. The initial implementation/deployment-preparation commit is `f88de09`.
 
-Render sign-in is complete and Render can read the public repository. Both the Blueprint flow and manual PostgreSQL creation require a card on this account. The manual page states this is identity verification with a temporary $1 authorization. The owner must complete financial verification themselves; no payment information was entered by the agent. No hosted resources or live service URL have been created. Verification, resource creation, and live checks must be completed before claiming this application is deployed.
+Render card identity verification was completed by the owner; the owner confirmed the temporary $1 hold was released. The Blueprint created a Free Docker web service and Free PostgreSQL 18 database in Frankfurt. No paid compute plan was selected.
+
+Verified deployment resources:
+
+- Web service: `srv-db5lro7avr4c7398oup0`.
+- Database: `dpg-db5lrc7avr4c7398nkl0-a`.
+- Blueprint: `exs-db5looflk1mc73aemirg`.
+- Initial deployment: `dep-db5lronavr4c7398ovng`, source commit `2e2e2d1`.
+- Live application: [https://taskbid-pisc.onrender.com](https://taskbid-pisc.onrender.com).
+- Database expiry: **10 November 2026**, as shown on Render's database Info page.
+
+The logs confirmed both numbered migrations, demo seeding, and Express listening on Render's assigned port 10000. Live checks confirmed five users, all seven task stages, dashboard metrics, stale-bid eligibility, concurrent assignment with fallback, audit transitions, workload release, and HTML direct task-page navigation. Browser tabs confirmed a bid appeared in the creator's tab without refresh. Verification used separate named tasks; seeded race/stale scenarios were preserved for the Loom video.
+
+The Free instance may cold-start after inactivity. For the required two-week availability window, submit with at least two weeks remaining before the database expires; do not claim availability beyond its expiry. The human Loom recording remains pending. Avoid upgrading resources or adding paid features; with a saved card, bandwidth/build overages can also be billed under Render's limits.

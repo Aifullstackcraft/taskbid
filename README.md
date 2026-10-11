@@ -4,7 +4,9 @@ A collaborative task marketplace built with React, Express, TypeScript, and Post
 
 **Repository:** [Aifullstackcraft/taskbid](https://github.com/Aifullstackcraft/taskbid) (public).
 
-**Deployment:** the free Render configuration is prepared in `render.yaml`, and the source is public on GitHub. Render sign-in is complete, but this account requires card-based identity verification before resources can be created. Resource creation and live verification are pending. A verified live URL and a 10-minute Loom walkthrough must be added before submission. See [the deployment guide](docs/DEPLOYMENT.md).
+**Live application:** [https://taskbid-pisc.onrender.com](https://taskbid-pisc.onrender.com)
+
+Deployed on Render Free web service and Free PostgreSQL. Migrations and demo seeding completed, and live API/concurrency/real-time checks passed on 11 October 2026. The free database expires **10 November 2026**. Cold starts may take 50 seconds or more after inactivity. The mandatory human-recorded Loom walkthrough still needs to be added before submission. See [the deployment guide](docs/DEPLOYMENT.md).
 
 ## Run locally
 

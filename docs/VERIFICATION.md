@@ -1,6 +1,6 @@
 # Local verification record
 
-Verified on 8 October 2026. Deployment and cloud verification are intentionally deferred.
+Local checks were verified on 8 October 2026; hosted checks were verified on 11 October 2026. See the hosted section below for deployment evidence.
 
 ## Passed
 
@@ -25,6 +25,12 @@ Docker Desktop was started for local testing. Host PostgreSQL port 5432 conflict
 
 ## Scope of this evidence
 
-This is local functional verification, not a load test, external security audit, or proof of hosting compatibility. The app uses simulated identity and a small-team data model. Actual deployment, two-week availability, production SSE/proxy behavior, live URL, and the human Loom recording still need verification before submission.
+The earlier local checks are functional verification, not a load test or external security audit. The app uses simulated identity and a small-team data model. Hosted behavior is documented below. Future uptime throughout the two-week review window cannot be established by a one-time check, and the human Loom recording remains pending.
+
+## Hosted verification: 11 October 2026
+
+The app is live at [https://taskbid-pisc.onrender.com](https://taskbid-pisc.onrender.com). Render logs confirmed a successful Docker build, both migrations, seed execution, and healthy startup. Both hosted resources use Free plans; PostgreSQL expires 10 November 2026.
+
+Live checks passed for health, five demo users, all lifecycle stages, dashboard aggregates, stale-bid eligibility, simultaneous assignments choosing a single shared bidder plus fallback, audit records, completion workload release, and direct task-page HTML navigation. A bid submitted in a second browser tab appeared in the first without refresh, confirming hosted SSE invalidation. Separate verification tasks were used so seeded video scenarios remain available. This hosted verification supplements the earlier local record; it does not establish future uptime or replace the mandatory Loom recording.
 
 Browser tests create named workflow tasks in the development database. They do not reset user data. Database integration fixtures are confined to the `_test` database. Demo data may therefore contain completed browser-test tasks after verification.

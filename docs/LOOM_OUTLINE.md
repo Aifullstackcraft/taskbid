@@ -2,6 +2,8 @@
 
 This is an outline for a later human recording, not a completed Loom submission.
 
+Live app: [https://taskbid-pisc.onrender.com](https://taskbid-pisc.onrender.com). Open it shortly before recording to allow any Free-instance cold start to finish. Start as Ayesha Khan. The seeded capacity-race and stale-bid tasks remain ready for demonstration. Ignore completed tasks titled "Deployment verification"; these are the separate hosted checks.
+
 ## 0:00–1:00: Product and architecture
 
 Show the user switcher, task board, and dashboard. Explain the three parts: React, Express, PostgreSQL. State that bids offer hours and the lowest currently eligible user receives the task. Explain that identity is simulated.

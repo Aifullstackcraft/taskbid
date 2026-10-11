@@ -271,7 +271,7 @@ Browser navigation to `/tasks/:id` must return the React page, while `/api/tasks
 
 The app uses the database container hostname `db` inside Compose and localhost port 5433 on the host. Port 5433 avoids a native local PostgreSQL instance. The Docker volume persists state. Database health determines whether the app starts; migrations and seed run before the server.
 
-The Node production process also handles shutdown signals: close event clients/listener, stop accepting connections, end the pool, and bound shutdown time. Actual deployment remains a later step. No live URL or cloud real-time claim exists yet.
+The Node production process also handles shutdown signals: close event clients/listener, stop accepting connections, end the pool, and bound shutdown time. Deployment was completed on 11 October 2026 at [https://taskbid-pisc.onrender.com](https://taskbid-pisc.onrender.com), with hosted migrations, seeding, API checks, concurrent assignment, and cross-tab real-time updates verified. See `docs/DEPLOYMENT.md` for the Free-plan limitations and 10 November database expiry.
 
 ## 24. What the tests establish
 
@@ -344,4 +344,4 @@ Use that as a starting point, then explain the actual code in your own words. Av
 
 The local verification record is in `docs/VERIFICATION.md`: 19 PostgreSQL integration tests, three Chromium browser tests, TypeScript checks, production builds, Docker startup, and compiled-route smoke checks passed. Read that file for the precise scope of those claims.
 
-For review, open the application and then walk through the schema and assignment code in the reading order above. Run the deterministic race test yourself and explain the shared user lock before changing any concurrency code. Next, review the UI flows and errors. Deployment and a human-recorded Loom walkthrough come after this review, as requested. The optional optimizer and outbid-toast feature remain optional scope, rather than hidden unfinished mandatory work.
+For review, open the live application and then walk through the schema and assignment code in the reading order above. Run the deterministic race test yourself and explain the shared user lock before changing any concurrency code. Next, review the UI flows and errors, then record the Loom walkthrough using `docs/LOOM_OUTLINE.md`. The app is already deployed and seeded; the original capacity-race and stale-bid seed tasks were preserved during hosted verification. The optional optimizer and outbid-toast feature remain optional scope, rather than hidden unfinished mandatory work.
