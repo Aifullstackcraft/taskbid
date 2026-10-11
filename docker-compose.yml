@@ -1,0 +1,27 @@
+services:
+  db:
+    image: postgres:18-alpine
+    environment:
+      POSTGRES_USER: taskbid
+      POSTGRES_PASSWORD: taskbid
+      POSTGRES_DB: taskbid
+    ports: ['5433:5432']
+    volumes: ['postgres-data:/var/lib/postgresql']
+    healthcheck:
+      test: ['CMD-SHELL', 'pg_isready -U taskbid']
+      interval: 3s
+      timeout: 3s
+      retries: 20
+  app:
+    build: .
+    environment:
+      DATABASE_URL: postgres://taskbid:taskbid@db:5432/taskbid
+      WEB_ORIGIN: http://localhost:3001
+      PORT: 3001
+    ports: ['3001:3001']
+    depends_on:
+      db:
+        condition: service_healthy
+    command: sh -c "npm run db:migrate && npm run db:seed && npm run start -w @taskbid/api"
+volumes:
+  postgres-data:

@@ -1,0 +1,29 @@
+{
+  "name": "taskbid",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
+  "scripts": {
+    "start:production": "npm run db:migrate && npm run db:seed && npm run start -w @taskbid/api",
+    "dev": "concurrently -n api,web \"npm run dev -w @taskbid/api\" \"npm run dev -w @taskbid/web\"",
+    "build": "npm run build -w @taskbid/api && npm run build -w @taskbid/web",
+    "typecheck": "npm run typecheck --workspaces --if-present",
+    "db:migrate": "npm run migrate -w @taskbid/api",
+    "db:seed": "npm run seed -w @taskbid/api",
+    "test": "npm run test -w @taskbid/api",
+    "test:e2e": "playwright test"
+  },
+  "overrides": {
+    "shell-quote": "^1.11.0"
+  },
+  "devDependencies": {
+    "@playwright/test": "^1.56.0",
+    "concurrently": "^9.2.1",
+    "prettier": "^3.9.9",
+    "typescript": "^5.9.3"
+  }
+}

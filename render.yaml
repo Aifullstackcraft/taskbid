@@ -1,0 +1,25 @@
+# Both resources explicitly use Free. No disks, paid jobs, or paid instance plans.
+services:
+  - type: web
+    name: taskbid
+    runtime: docker
+    plan: free
+    region: frankfurt
+    branch: main
+    dockerfilePath: ./Dockerfile
+    dockerContext: .
+    healthCheckPath: /health
+    envVars:
+      - key: NODE_ENV
+        value: production
+      - key: DATABASE_URL
+        fromDatabase:
+          name: taskbid-db
+          property: connectionString
+
+databases:
+  - name: taskbid-db
+    plan: free
+    region: frankfurt
+    databaseName: taskbid
+    user: taskbid

@@ -1,0 +1,12 @@
+node_modules/
+dist/
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+tmp/
+test-results/
+playwright-report/
+.local-db/

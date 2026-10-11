@@ -1,0 +1,30 @@
+{
+  "name": "@taskbid/api",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "build": "tsc",
+    "typecheck": "tsc --noEmit",
+    "start": "node dist/apps/api/src/server.js",
+    "migrate": "tsx src/db/migrate.ts",
+    "seed": "tsx src/db/seed.ts",
+    "test": "tsx --test ../../tests/integration/*.test.ts"
+  },
+  "dependencies": {
+    "@taskbid/contracts": "*",
+    "cors": "^2.8.5",
+    "dotenv": "^17.2.3",
+    "express": "^5.1.0",
+    "pg": "^8.16.3",
+    "zod": "^4.1.12"
+  },
+  "devDependencies": {
+    "@types/cors": "^2.8.19",
+    "@types/express": "^5.0.3",
+    "@types/node": "^24.10.0",
+    "@types/pg": "^8.15.6",
+    "tsx": "^4.20.6"
+  }
+}
